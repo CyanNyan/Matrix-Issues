@@ -17,14 +17,14 @@
 
 ## Message Prefix
 # Description: How would you like the Matrix prefix formatted?
-prefix: '&7[&bMatrix&7]&r '
+prefix: '&7[&b~&7]&r '
 
 ## Kick Message Format
 # Description: This is the message broadcast to the entire server when someone is kicked because of cheating!
 kick-format: 'player %player% was kicked because of cheating!'
 
 ## Broadcast a message when a player is kicked?
-kick-broadcast: true
+kick-broadcast: false
 
 ## Spam Warning Message Format
 # Description: This is the message sent to a player who has triggered the ChatSpam check.

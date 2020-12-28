@@ -16,7 +16,7 @@
 # Thanks for using Matrix! <3
 
 # Check update when starting up?
-check_update: true
+check_update: false
 
 # Player Latency Protection
 # Reduce the VL value triggered by high-latency players, making them less likely to be kicked out
@@ -66,7 +66,7 @@ bungee_geysermc_support: false
 
 # Kick Lighting Effect
 # Should there be a lightning bolt visual effect if someone is getting kicked using /matrix kick
-kick_strike_lightning: true
+kick_strike_lightning: false
 
 # Ghost Mode
 # If you enable Ghost Mode, Matrix will Not setback player or cancel illegal actions.

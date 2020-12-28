@@ -19,7 +19,7 @@
 # Prevents the player from using the KillAura/AimBot hack
 killaura:
   # Enable KillAura check?
-  enable: true
+  enable: false
 
   # List of the various KillAura check modules of Matrix
   modules:
@@ -182,9 +182,9 @@ hitbox:
   # number_of_violations: '<command>'
   commands:
     10: 'matrix notify %player% tried to reach entity outside max reach distance (HitBox)'
-    12: 'matrix npc %player% 120'
+    # 12: 'matrix npc %player% 120'
     15: 'matrix notify %player% tried to reach entity outside max reach distance (HitBox) #2'
-    24: 'matrix kick %player% Reach/HitBox Hacks'
+    # 24: 'matrix kick %player% Reach/HitBox Hacks'
 
 ## Movement Speed Check
 # This checks how fast a player moves, and prevents the player from moving too fast.
@@ -198,10 +198,12 @@ speed:
   ignore_unloaded_chunks: true
 
   # Speed prediction tolerance
-  tolerance: 0.01
+  # tolerance: 0.01
+  tolerance: 0.025
 
   # Violations needed to cancel illegal movements (-1 = never cancel)
-  cancel_vl: 30
+  # cancel_vl: 30
+  cancel_vl: 100
 
   # Enable sprint direction check?
   sprint_direction: true
@@ -220,7 +222,7 @@ speed:
   commands:
     55: 'matrix notify %player% tried to move faster than usual (Speed) #1'
     90: 'matrix notify %player% tried to move faster than usual (Speed) #2'
-    220: 'matrix kick %player% Speed Hacks'
+    # 220: 'matrix kick %player% Speed Hacks'
 
 ## Fly
 # Prevents the player from using both vanilla and non-vanilla fly hacks.
@@ -230,7 +232,8 @@ fly:
   enable: true
 
   # Violations needed to cancel illegal movements (-1 = never cancel)
-  cancel_vl: 50
+  # cancel_vl: 50
+  cancel_vl: 200
 
   # Fly ability check
   # It might be not compatible with some plugins, test it by yourself
@@ -266,7 +269,7 @@ fly:
   commands:
     50: 'matrix notify %player% tried to fly (Fly) #1'
     100: 'matrix notify %player% tried to fly (Fly) #2'
-    180: 'matrix kick %player% Fly Related Hacks'
+    # 180: 'matrix kick %player% Fly Related Hacks'
 
 
 ## BadPackets
@@ -298,7 +301,7 @@ badpackets:
   commands:
     100: 'matrix notify %player% is sending unusual packets to server (BadPackets) #1'
     150: 'matrix notify %player% is sending unusual packets to server (BadPackets) #2'
-    240: 'matrix kick %player% Sending Unusual Packets'
+    # 240: 'matrix kick %player% Sending Unusual Packets'
 
 ## Delay Check
 # It prevents the player from speeding up certain actions, such as eating quickly, or quickly healing
@@ -324,7 +327,7 @@ delay:
   commands:
     3: 'matrix notify %player% tring to speeding up actions (Delay) #1'
     5: 'matrix notify %player% tring to speeding up actions (Delay) #2'
-    10: 'matrix kick %player% Speeding Up Operations'
+    # 10: 'matrix kick %player% Speeding Up Operations'
 
 ## Block
 # Check prevents the player from breaking, placing block quickly
@@ -360,13 +363,13 @@ block:
   # number_of_violations: '<command>'
   commands:
     10: 'matrix notify %player% tried to place/break a block too quickly (FastPlace/FastBreak)'
-    20: 'matrix kick %player% FastPlace/FastBreak Hacks'
+    # 20: 'matrix kick %player% FastPlace/FastBreak Hacks'
 
 ## Scaffold check
 # Check prevents player bridging blocks or towering up faster than normal speed
 scaffold:
   # Enable this check
-  enable: true
+  enable: false
 
   # Cancel VL
   cancel_vl: 15
@@ -400,7 +403,7 @@ scaffold:
   commands:
     10: 'matrix notify %player% tried to bridge blocks quickly (Scaffold)'
     15: 'matrix notify %player% tried to bridge blocks quickly (Scaffold) #2'
-    24: 'matrix kick %player% Scaffold/Tower'
+    # 24: 'matrix kick %player% Scaffold/Tower'
 
 ## Jesus
 # Check prevents the player from moving too too quickly in liquids, or walking on liquid.
@@ -409,7 +412,8 @@ jesus:
   enable: true
 
   # Violations needed to cancel illegal movements (-1 = never cancel)
-  cancel_vl: 15
+  # cancel_vl: 15
+  cancel_vl: 30
 
   # Should Matrix ignore whether player is in swimming?
   # This feature can prevent swimming status desync
@@ -420,7 +424,7 @@ jesus:
   commands:
     20: 'matrix notify %player% tried to move illegally in liquid (Jesus)'
     40: 'matrix notify %player% tried to move illegally in liquid (Jesus) #2'
-    50: 'matrix kick %player% Jesus/WaterSpeed/WaterFly Hacks'
+    # 50: 'matrix kick %player% Jesus/WaterSpeed/WaterFly Hacks'
 
 ## Velocity
 # Check prevents the player from using any type of anti-knockback hacks.
@@ -431,7 +435,7 @@ velocity:
   # The time to wait for players to respond to velocity (ticks)
   # If the player does not respond to velocity after that
   # time, the player will be detected.
-  wait_time: 20
+  wait_time: 30
 
   # Ignore lag player, this feature can ignore the player who
   # is lagging or changing resource pack.
@@ -448,7 +452,7 @@ velocity:
   commands:
     10: 'matrix notify %player% tried to ignore server velocity (Velocity)'
     15: 'matrix notify %player% tried to ignore server velocity (Velocity) #2'
-    20: 'matrix kick %player% Velocity/Anti-Knockback'
+    # 20: 'matrix kick %player% Velocity/Anti-Knockback'
 
 ## Spam
 # Check prevents a player from spamming messages in the servers chat.
@@ -466,7 +470,7 @@ chat:
   # number_of_violations: '<command>'
   commands:
     4: 'matrix notify %player% is spamming the chat (ChatSpam)'
-    10: 'matrix kick %player% Stop spamming the chat!'
+    # 10: 'matrix kick %player% Stop spamming the chat!'
 
 ## Interact
 # Check prevents the player from illegally interacting with entities and blocks.
@@ -493,7 +497,7 @@ interact:
   # number_of_violations: '<command>'
   commands:
     10: 'matrix notify %player% tried to illegally interact with Entity/Block (Interact)'
-    15: 'matrix kick %player% Illegally Interacting with Block/Entity'
+    # 15: 'matrix kick %player% Illegally Interacting with Block/Entity'
 
 ## Phase
 # Check prevents the player people glitching through blocks.
@@ -543,21 +547,24 @@ elytra:
 
   # Should Matrix be forced to pull back players who are particularly
   # cheating? Even if they do not reach cancel_vl (default: true)
-  force_setback: true
+  # force_setback: true
+  force_setback: false
 
   # Setback violation level (-1 = never setback)
-  setback_vl: 5
+  # setback_vl: 5
+  setback_vl: 20
 
   # unequip elytra VL
   # If player reached this VL, Matrix will make it out of the gliding state (-1 = disable this feature)
-  unequip_vl: 20
+  # unequip_vl: 20
+  unequip_vl: -1
 
   # Violation Thresholds
   # number_of_violations: '<command>'
   commands:
     10: 'matrix notify %player% suspected using elytra flight (Elytra)'
     20: 'matrix notify %player% suspected using elytra flight (Elytra) #2'
-    40: 'matrix kick %player% Elytra Flight'
+    # 40: 'matrix kick %player% Elytra Flight'
 
 ## Vehicle
 # Checks prevents player using VehicleFlight, VehicleSpeed, EntitySpeed..
@@ -595,4 +602,4 @@ vehicle:
   commands:
     5: 'matrix notify %player% suspected using vehicle cheat (Vehicle)'
     10: 'matrix notify %player% suspected using vehicle cheat (Vehicle) #2'
-    17: 'matrix kick %player% Suspicious vehicle movement'
+    # 17: 'matrix kick %player% Suspicious vehicle movement'
