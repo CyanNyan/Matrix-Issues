@@ -17,7 +17,7 @@
 #####################################################################################
 
 # Should Matrix check update when starting up?
-check_update: true
+check_update: false
 
 # Premium User - Verify the identity of premium/enterprise users
 #
@@ -82,7 +82,7 @@ permission_refresh_interval: 15
 bungee_geysermc_support: false
 
 # Should there be a lightning bolt visual effect if someone is getting kicked using /matrix kick
-kick_strike_lightning: true
+kick_strike_lightning: false
 
 # Server Lag Protection
 # Automatically disables some checks when your server is lagging. This prevents

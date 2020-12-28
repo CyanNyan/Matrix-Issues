@@ -12,13 +12,13 @@
 #####################################################################################
 
 # You can define the message prefix here
-prefix: '&7[&bMatrix&7]&r '
+prefix: '&7[&b~&7]&r '
 
 # Define the announcement message after the player is kicked out by anti-cheating
 kick-format: 'player %player% was kicked because of cheating!'
 
 # Should Matrix broadcast a message when a player is kicked?
-kick-broadcast: true
+kick-broadcast: false
 
 # What message should send to the player when Matrix detects
 # that the player is sending chat messages too fast?
