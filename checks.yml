@@ -138,7 +138,7 @@ hitbox:
   enable: true
 
   # Maximum reach distance (default: 3.15)
-  max_reach: 3.05
+  max_reach: 3.25
 
   # The tick length of the traceback when calculating the hitbox
   trace_back_length: 8
@@ -216,13 +216,13 @@ move:
   check_noslow: true
 
   # When the player reaches this VL, start to pull back the player's abnormal movement
-  cancel_vl: 35
+  cancel_vl: 60
 
   # Should Matrix apply damage to the player when the player is setback?
-  apply_damage: true
+  apply_damage: false
 
   # Should Matrix teleport the player into the void if the player cheats on the void?
-  allow_setback_to_void: true
+  allow_setback_to_void: false
 
   # Violation Thresholds
   # number_of_violations: '<command>'
@@ -277,8 +277,8 @@ delay:
   check_using_items: 1
   check_using_bow: 1
   check_auto_splash: 2
-  check_inventory_action: 1
-  check_auto_totem: 1
+  check_inventory_action: -1
+  check_auto_totem: -1
   check_fast_throw: 1
 
   # Violation Thresholds
@@ -295,7 +295,7 @@ block:
   enable: true
 
   # Violations needed to cancel illegal breaking/placing of blocks (-1 = never cancel)
-  cancel_vl: 5
+  cancel_vl: 8
 
   # Modules List
   # You can turn off some modules here
@@ -331,7 +331,7 @@ scaffold:
   enable: false
 
   # Cancel VL
-  cancel_vl: 15
+  cancel_vl: 30
 
   # Modules
   modules:
