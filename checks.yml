@@ -524,8 +524,8 @@ vehicle:
 
   # Prevent players from using certain creatures as vehicles
   # All entity types: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html
-  deny_entity_types_as_vehicle:
-    - 'LLAMA'
+  deny_entity_types_as_vehicle: []
+    # - 'LLAMA'
 
   # Vehicle Speed/ Entity Speed
   speed:
